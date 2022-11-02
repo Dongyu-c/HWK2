@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{ECS132 HWK2}
+\author{Alan Wu, Dongyu  Chen, Rishabh Manu, Joshua Winter}
+\date{February 2021}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{enumerate}
+\item  $Var(XYZ)$
+\\  $=  E((XYZ)^2)- (E(XYZ))^2 $
+\\ \# Since X. Y and Z are independent
+\\ $= E(X^2)*E(Y^2)*E(Z^2) -(E(X)*E(Y)*E(Z))^2$
+\\ \# Since X, Y and Z are indicator random variables, $E(X^2)=E(X), E(Y^2) = E(Y), E(Z^2) =(Z)$
+\\$= (E(X)*E(Y)*E(Z))-(E(X)*E(Y)*E(Z))^2$
+\\$= pqr - (pqr)^2$
+\item See attachment.
+\item See attachment.
+\item $P(X = 0) = q$
+
+$P(X = k) = c (1-p)^{|k|-1} p$
+\\We need to find the value of c first.
+\\1 =  $ \sum_{n=0}^{\infty} P(X = n)  $
+\\$= q + \sum_{k=1}^{\infty}  c (1-p)^{|k|-1} p 
+\\ = q  + c
+\\ =1$
+\\$  c = 1-q$
+\\Var(X) = $E(X^2) -(E(X))^2$
+\\ $= \sum_{k=1}^{\infty}  (1-q) k^2 (1-p)^{|k|-1} p - (\sum_{k=1}^{\infty}  (1-q) k (1-p)^{|k|-1} p )^2
+\\ = (1-q)(2/p^2 -1/p)- ((1-q)/p)^2$
+\\ 
+\item See attachment.
+\item For X, the probability density function is given by:$$ f_x(t) = \lambda e ^ {-\lambda t}$$
+\\ lets introduce c, where c $>$ 0. To prove $cX$ is still has an exponential distribution, using the hint, we will prove that the cdf of the random variable cX takes the form: $$ f_x(t) = \lambda e ^ {-\lambda t}$$
+\\$P(cX > t) = P( X > t/c)$
+\\let $T$ = $t/c$
+\\$P(X > T)$ = $\int_T^{\infty} \lambda e ^ {-\lambda T} dT$ = $ e ^ {-\lambda T}$
+\\
+\\ then, by substituting T = $t/c$ 
+\\$P(cX > t) = e ^ {-\lambda t/c}$
+\\the final equation takes the same form as the original pdf for an exponential. Multiplying by a constant only changes the original $t$ variable to $t/c$
+\item See attachment.
+\end{enumerate}
+\end{document}
